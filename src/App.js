@@ -1,25 +1,26 @@
 import logo from './logo.svg';
 import './App.css';
+// import { Component } from 'react';
+// import Addition from './Components/addition';
+// import Sum from './Components/sum';
+// import Product from './Product';
+import React, { Component } from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  render(){
+    return (
+      <div className="App">
+       <img src={logo} className="App-logo" alt="logo" />
+         <Addition></Addition>
+         <Addition></Addition>
+         <Sum></Sum>
+         {/* <Product></Product> */}
+         <Product name="multiplication"/>
+         <Product name="addition"/>
+         <Product name="subtraction"/>
+      </div>
+    );
+  }
 }
 
 export default App;
